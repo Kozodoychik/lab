@@ -8,9 +8,7 @@ STEPS = 1000000
 def worker():
 	global shared_counter
 	for _ in range(STEPS):
-		tmp = shared_counter
-		tmp += 1
-		shared_counter = tmp
+		shared_counter += 1
 
 print("Запуск двух потоков без синхронизации...")
 start_time = time.time()
